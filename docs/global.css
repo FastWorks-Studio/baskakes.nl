@@ -5,7 +5,9 @@
 
 :root {
   --color-background: #fff;
-  --color-text: #333;
+  --color-text: #545454;
+  --color-red: #FD4242;
+  --color-pink: #FF8989;
   --font-title: "Lobster";
 }
 

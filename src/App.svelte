@@ -1,9 +1,9 @@
 <script lang="ts">
-  $: name = "Bas Kakes";
+  import Logo from "./components/Logo.svelte";
 </script>
 
 <main>
-  <h1>{name}</h1>
+  <Logo />
 </main>
 
 <style>
@@ -11,6 +11,6 @@
     display: flex;
     flex-direction: column;
     text-align: center;
-    padding: 1em;
+    padding: 2em;
   }
 </style>
