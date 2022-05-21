@@ -72,7 +72,7 @@
     width: 3.2vw;
     height: 3.2vw;
     background-color: var(--color-red);
-    animation: flickerAnimation 1s infinite;
+    animation: var(--animation-recording);
   }
 
   corner {
@@ -85,7 +85,7 @@
 
   corner.topRight {
     right: 0;
-    top: 0.5em;
+    top: 1vw;
     border-width: var(--width-corner) var(--width-corner) 0 0;
   }
 
@@ -97,7 +97,7 @@
 
   corner.topLeft {
     left: 0;
-    top: 0.5em;
+    top: 1vw;
     border-width: var(--width-corner) 0 0 var(--width-corner);
   }
 
@@ -105,17 +105,5 @@
     left: 0;
     bottom: 0;
     border-width: 0 0 var(--width-corner) var(--width-corner);
-  }
-
-  @keyframes flickerAnimation {
-    0% {
-      opacity: 1;
-    }
-    50% {
-      opacity: 0.5;
-    }
-    100% {
-      opacity: 1;
-    }
   }
 </style>

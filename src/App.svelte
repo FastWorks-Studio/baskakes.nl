@@ -3,7 +3,10 @@
 </script>
 
 <main>
-  <Logo />
+  <center>
+    <Logo />
+    <p>work in progress</p>
+  </center>
 </main>
 
 <style>
@@ -11,6 +14,20 @@
     display: flex;
     flex-direction: column;
     text-align: center;
+    align-items: center;
     padding: 2em;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  center {
+    margin: auto;
+  }
+
+  p {
+    padding-top: 1vw;
+    color: var(--color-red);
+    font-size: 5vw;
+    animation: var(--animation-recording);
   }
 </style>

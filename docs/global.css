@@ -3,12 +3,18 @@
   src: url("./assets/fonts/Lobster-Regular.ttf");
 }
 
+@font-face {
+  font-family: "KoHo";
+  src: url("./assets/fonts/KoHo-Bold.ttf");
+}
+
 :root {
   --color-background: #fff;
   --color-text: #545454;
   --color-red: #FD4242;
   --color-pink: #FF8989;
   --font-title: "Lobster";
+  --animation-recording: flickerAnimation 1s infinite;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -69,4 +75,17 @@ h6 {
 
 p {
   font-size: 16pt;
+  font-family: "KoHo";
+}
+
+@keyframes flickerAnimation {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
 }
