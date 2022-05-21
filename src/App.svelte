@@ -1,5 +1,5 @@
 <script lang="ts">
-  let name: string = "rat kakes";
+  $: name = "rat kakes";
 </script>
 
 <main>
