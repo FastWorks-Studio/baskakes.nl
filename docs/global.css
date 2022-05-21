@@ -1,6 +1,7 @@
 :root {
   --color-background: #fff;
   --color-text: #333;
+  --font-title: "Lobster";
 }
 
 @media (prefers-color-scheme: dark) {
@@ -27,6 +28,12 @@ body {
 	background-color: var(--color-background);
   color: var(--color-text);
 	font-family: -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-title);
+  font-weight: 500;
 }
 
 h1 {
@@ -55,4 +62,9 @@ h6 {
 
 p {
   font-size: 16pt;
+}
+
+@font-face {
+  font-family: "Lobster";
+  src: url("./assets/fonts/Lobster-Regular.ttf");
 }

@@ -3,8 +3,7 @@
 </script>
 
 <main>
-  <h1>Hoi!</h1>
-  <p>Ik ben {name}</p>
+  <h1>{name}</h1>
 </main>
 
 <style>
