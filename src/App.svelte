@@ -1,12 +1,11 @@
 <script lang="ts">
   import Logo from "./components/Logo.svelte";
+  import LogoSvg from "./components/Logo.svelte";
 </script>
 
 <main>
-  <center>
-    <Logo />
-    <p>work in progress</p>
-  </center>
+  <LogoSvg />
+  <p>work in progress</p>
 </main>
 
 <style>
@@ -14,14 +13,11 @@
     display: flex;
     flex-direction: column;
     text-align: center;
-    align-items: center;
-    padding: 2em;
+    align-items: stretch;
+    padding: 10vw;
     width: 100vw;
     height: 100vh;
-  }
-
-  center {
-    margin: auto;
+    justify-content: center;
   }
 
   p {
