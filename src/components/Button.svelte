@@ -22,7 +22,7 @@
 
 <style>
   main {
-    padding: 1rem 1.5rem 1.4rem 1.5rem;
+    padding: 1.4rem 3rem 2rem 3rem;
     border-radius: 100vh;
     text-align: center;
     border: 0.25rem solid var(--color-red);

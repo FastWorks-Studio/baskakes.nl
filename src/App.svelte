@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { onMount } from "svelte";
+
   import Button from "./components/Button.svelte";
   import Logo from "./components/Logo.svelte";
   import Vimeo from "./components/Vimeo.svelte";
@@ -12,6 +14,8 @@
   $: videoUrl = getVideoUrl();
   let quote =
     "Ik wil de wereld van haar mooiste kant laten zien. Dit doe ik via mijn passie voor film.";
+
+  onMount(onResize);
 
   function onResize() {
     const newVideoUrl = getVideoUrl();
@@ -43,7 +47,7 @@
       />
     </imgContainer>
     <space />
-    <p>{quote}</p>
+    <quote><p>{quote}</p></quote>
     <Button center={true} click={onClickPortfolio}>Bekijk mijn portfolio</Button
     >
     <h2>Showreel</h2>
@@ -91,6 +95,11 @@
       van Coen en mijzelf. Dit wilde ik onderzoeken en is uitgedraaid tot een bioscoopfilm
       over de stad.
     </p>
+    <img
+      class="photo"
+      alt="Foto van première Dordrecht door de jaren heen."
+      src="./assets/images/dordrecht-door-de-jaren-heen-premiere.jpg"
+    />
     <a target="_blank" href="https://www.dordtfilm.nl/"
       >Meer over Dordrecht door de jaren heen</a
     >
@@ -100,7 +109,7 @@
       >In het AD</a
     >
     <h3>BMW Nederland</h3>
-    <p>
+    <p class="bmw">
       Voor BMW maak ik diverse films van speciale evenementen die ze verzorgen. <i
         >BMW Privileges</i
       > (een programma voor klanten) biedt meerdere evenementen aan voor BMW-rijders.
@@ -132,6 +141,16 @@
       met onder andere Jacques van der Neut (oud-boswachter van de Biesbosch)
       maak ik een film over dit prachtige gebied.
     </p>
+    <img
+      class="photo"
+      alt="Foto van camera van Bas"
+      src="./assets/images/biesbosch-camera.jpg"
+    />
+    <img
+      class="photo"
+      alt="Foto van Bas met camera"
+      src="./assets/images/bas-kakes-biesbosch.jpg"
+    />
 
     <p>
       Natuurlijk ben ik beschikbaar voor onder ander bedrijfsvideo’s,
@@ -155,7 +174,7 @@
     flex-direction: column;
     text-align: center;
     align-items: stretch;
-    padding: 2rem;
+    padding: 4rem;
     width: 100vw;
     justify-content: center;
   }
@@ -180,12 +199,43 @@
     filter: blur(1em);
   }
 
+  quote {
+    margin: 0 auto;
+    text-align: center;
+    max-width: 60rem;
+    padding-bottom: 5rem;
+  }
+
+  quote > p {
+    font-family: var(--font-body-bold);
+    font-size: 32px;
+  }
+
   h2 {
     padding-top: 3rem;
   }
 
   h3 {
     padding-top: 2rem;
+  }
+
+  p.bmw {
+    position: relative;
+  }
+
+  p.bmw:after {
+    position: absolute;
+    content: "";
+    left: -15rem;
+    opacity: 0.35;
+    transform: rotate(15deg);
+    top: -8rem;
+    z-index: -1;
+    width: 40rem;
+    height: 40rem;
+    background-size: 40rem 40rem;
+    background-image: url("../assets/images/bmw-logo.svg");
+    background-repeat: none;
   }
 
   spacer {
@@ -198,11 +248,15 @@
     margin: 0 auto;
   }
 
+  img.photo {
+    margin: 0 -4rem;
+    padding: 3rem 0;
+  }
+
   img.badge {
     width: 100%;
     height: 100%;
     border-radius: 100%;
-    box-shadow: 0 0 0 0.5rem var(--color-pink-secondary),
-      0 0 0 1rem var(--color-pink);
+    box-shadow: 0 0 0 0.5rem var(--color-pink), 0 0 0 1rem var(--color-red);
   }
 </style>
