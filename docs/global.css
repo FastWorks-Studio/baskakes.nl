@@ -9,9 +9,9 @@
 }
 
 :root {
-  --color-background: #fff;
+  --color-background: #222;
+  --color-text: var(--color-white);
   --color-white: #fff;
-  --color-text: #545454;
   --color-red: #fa5555;
   --color-pink: #FF8989;
   --color-pink-secondary: #FFE4E1;
@@ -20,10 +20,10 @@
   --animation-recording: flickerAnimation 1s infinite;
 }
 
-/* @media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: light) {
   :root {
-    --color-background: #222;
-    --color-text: var(--color-white);
+    --color-text: #545454;
+    --color-background: #fff;
   }
 } */
 

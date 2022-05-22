@@ -60,12 +60,12 @@
 
 <style>
   :root {
-    --color-corner: var(--color-pink);
+    --color-corner: var(--color-text);
   }
 
-  /* @media (prefers-color-scheme: dark) {
+  /* @media (prefers-color-scheme: light) {
     :root {
-      --color-corner: var(--color-text);
+      --color-corner: var(--color-pink);
     }
   } */
 
