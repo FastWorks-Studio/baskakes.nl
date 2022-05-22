@@ -1,7 +1,18 @@
 <script lang="ts">
+  import Button from "./components/Button.svelte";
   import Logo from "./components/Logo.svelte";
+  import Title from "./components/Title.svelte";
+  import Vimeo from "./components/Vimeo.svelte";
+
+  $: innerWidth = 0;
+  $: width = Math.min(
+    Math.max(screen.width, screen.height) * 0.5,
+    Math.max(innerWidth, 300)
+  );
 
   $: videoUrl = getVideoUrl();
+  let quote =
+    "Ik wil de wereld van haar mooiste kant laten zien. Dit doe ik via mijn passie voor film.";
 
   function onResize() {
     const newVideoUrl = getVideoUrl();
@@ -14,34 +25,43 @@
       window.innerHeight > window.innerWidth ? "portrait" : "landscape";
     return `./assets/video/bg_${orientation}.mp4`;
   }
+
+  function onClickPortfolio() {
+    console.log(`did click portfolio`);
+  }
 </script>
 
-<main>
-  <Logo subtitle="work in progress" />
-  <dimLayer />
+<main style="width:{width}px">
+  <Logo subtitle="brengt het in beeld" />
+  <content>
+    <p>{quote}</p>
+    <Button onClick={onClickPortfolio}>bekijk mijn portfolio</Button>
+    <Title>Showreel</Title>
+    <Vimeo />
+  </content>
   <video preload="none" src={videoUrl} autoplay muted loop />
 </main>
-<svelte:window on:resize={onResize} />
+<svelte:window on:resize={onResize} bind:innerWidth />
 
 <style>
   main {
-    position: relative;
+    margin: auto;
     display: flex;
     flex-direction: column;
     text-align: center;
     align-items: stretch;
-    padding: 10vw;
+    padding: 3em;
     width: 100vw;
-    height: 100vh;
     justify-content: center;
   }
 
-  dimLayer {
-    position: absolute;
-    inset: 0;
-    z-index: -9;
-    opacity: 0.7;
-    background-color: var(--color-background);
+  content {
+    padding-top: 3em;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 3em;
   }
 
   video {
@@ -50,8 +70,8 @@
     width: 100vw;
     height: 100vh;
     object-fit: cover;
+    opacity: 0.2;
     z-index: -10;
     filter: blur(1em);
-    /* animation: var(--animation-recording); */
   }
 </style>

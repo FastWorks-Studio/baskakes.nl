@@ -1,16 +1,12 @@
 <script lang="ts">
   export let subtitle: string | undefined = undefined;
   $: clientWidth = 0;
-  $: width = Math.min(
-    Math.max(screen.width, screen.height) * 0.5,
-    Math.max(clientWidth, 300)
-  );
 </script>
 
 <main bind:clientWidth>
   <svg
-    {width}
-    height={(width * 598) / 2305}
+    width={clientWidth}
+    height={(clientWidth * 598) / 2305}
     viewBox="0 0 2305 598"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
@@ -54,7 +50,8 @@
   {#if subtitle != null}
     <p
       class="subtitle"
-      style="font-size:{width / 20}px;padding-top:{width / 100}px"
+      style="font-size:{clientWidth /
+        15}px;transform:translate(0,-{clientWidth / 30}px);"
     >
       {subtitle}
     </p>
@@ -79,6 +76,7 @@
 
   path.corner {
     stroke: var(--color-corner);
+    opacity: 0.3;
   }
 
   path.text {
@@ -90,7 +88,10 @@
   }
 
   p.subtitle {
-    color: var(--color-red);
-    animation: var(--animation-recording);
+    color: var(--color-corner);
+    font-family: var(--font-body-bold);
+    opacity: 0.3;
+    font-weight: 100;
+    font-style: italic;
   }
 </style>
