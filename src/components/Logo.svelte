@@ -93,5 +93,7 @@
     opacity: 0.3;
     font-weight: 100;
     font-style: italic;
+    user-select: none;
+    -webkit-user-select: none;
   }
 </style>
