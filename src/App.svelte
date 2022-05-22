@@ -196,7 +196,7 @@
     object-fit: cover;
     opacity: 0.2;
     z-index: -10;
-    filter: blur(1em);
+    filter: blur(2rem);
   }
 
   quote {
