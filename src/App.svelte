@@ -38,7 +38,7 @@
 
 <main style="width:{width}px">
   <Logo subtitle="brengt het in beeld" />
-  <video preload="none" src={videoUrl} autoplay muted loop />
+  <video preload="none" src={videoUrl} autoplay muted loop playsinline />
   <content>
     <badgeContainer>
       <img
