@@ -1,16 +1,27 @@
 <script lang="ts">
   import Logo from "./components/Logo.svelte";
+
+  $: videoUrl = getVideoUrl();
+
+  function onResize() {
+    const newVideoUrl = getVideoUrl();
+    if (newVideoUrl == videoUrl) return;
+    videoUrl = newVideoUrl;
+  }
+
+  function getVideoUrl() {
+    const orientation =
+      window.innerHeight > window.innerWidth ? "portrait" : "landscape";
+    return `./assets/video/bg_${orientation}.mp4`;
+  }
 </script>
 
 <main>
   <Logo subtitle="work in progress" />
-  <video
-    preload="none"
-    src="./assets/video/showreel_liggend.mp4"
-    autoplay
-    muted
-  />
+  <dimLayer />
+  <video preload="none" src={videoUrl} autoplay muted />
 </main>
+<svelte:window on:resize={onResize} />
 
 <style>
   main {
@@ -25,6 +36,14 @@
     justify-content: center;
   }
 
+  dimLayer {
+    position: absolute;
+    inset: 0;
+    z-index: -9;
+    opacity: 0.7;
+    background-color: var(--color-background);
+  }
+
   video {
     position: absolute;
     inset: 0;
@@ -32,6 +51,7 @@
     height: 100vh;
     object-fit: cover;
     z-index: -10;
-    opacity: 0.2;
+    filter: blur(1em);
+    /* animation: var(--animation-recording); */
   }
 </style>
