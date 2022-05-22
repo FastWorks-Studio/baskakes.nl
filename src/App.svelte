@@ -203,7 +203,7 @@
     margin: 0 auto;
     text-align: center;
     max-width: 60rem;
-    padding-bottom: 5rem;
+    padding-bottom: 10rem;
   }
 
   quote > p {
@@ -262,6 +262,7 @@
     width: 30rem;
     height: 30rem;
     margin: 0 auto;
+    margin-top: 5rem;
   }
 
   img.badge {
