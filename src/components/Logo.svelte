@@ -63,11 +63,11 @@
     --color-corner: var(--color-pink);
   }
 
-  @media (prefers-color-scheme: dark) {
+  /* @media (prefers-color-scheme: dark) {
     :root {
       --color-corner: var(--color-text);
     }
-  }
+  } */
 
   circle {
     fill: var(--color-red);

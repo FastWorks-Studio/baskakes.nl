@@ -20,12 +20,12 @@
   --animation-recording: flickerAnimation 1s infinite;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --color-background: #222;
     --color-text: var(--color-white);
   }
-}
+} */
 
 * {
   box-sizing: border-box;
