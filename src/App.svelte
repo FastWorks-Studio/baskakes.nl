@@ -32,7 +32,6 @@
     height: 100vh;
     object-fit: cover;
     z-index: -10;
-    background-color: orange;
     opacity: 0.2;
   }
 </style>
