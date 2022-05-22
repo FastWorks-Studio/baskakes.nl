@@ -1,5 +1,5 @@
 <script lang="ts">
-  export let subtitle: string | undefined;
+  export let subtitle: string | undefined = undefined;
   $: clientWidth = 0;
   $: width = Math.min(
     Math.max(screen.width, screen.height) * 0.5,
