@@ -1,6 +1,10 @@
-<script>
+<script lang="ts">
+  export let subtitle: string | undefined;
   $: clientWidth = 0;
-  $: width = Math.max(clientWidth, 300);
+  $: width = Math.min(
+    Math.max(screen.width, screen.height) * 0.5,
+    Math.max(clientWidth, 300)
+  );
 </script>
 
 <main bind:clientWidth>
@@ -47,6 +51,14 @@
       fill="#545454"
     />
   </svg>
+  {#if subtitle != null}
+    <p
+      class="subtitle"
+      style="font-size:{width / 20}px;padding-top:{width / 100}px"
+    >
+      {subtitle}
+    </p>
+  {/if}
 </main>
 
 <style>
@@ -76,5 +88,10 @@
 
   path.shadow {
     fill: var(--color-pink);
+  }
+
+  p.subtitle {
+    color: var(--color-red);
+    animation: var(--animation-recording);
   }
 </style>
