@@ -39,18 +39,18 @@
 <main style="width:{width}px">
   <Logo subtitle="brengt het in beeld" />
   <content>
-    <imgContainer>
+    <badgeContainer>
       <img
         class="badge"
         src="./assets/images/bas-kakes.jpg"
         alt="Foto van Bas Kakes"
       />
-    </imgContainer>
+    </badgeContainer>
     <space />
     <quote><p>{quote}</p></quote>
     <Button center={true} click={onClickPortfolio}>Bekijk mijn portfolio</Button
     >
-    <h2>Showreel</h2>
+    <h2 class="reel">Showreel</h2>
     <Vimeo />
     <p>
       Voor mij moet het modern, visueel verantwoord en technisch perfect zijn;
@@ -211,6 +211,10 @@
     font-size: 32px;
   }
 
+  h2.reel {
+    padding-top: 12rem;
+  }
+
   h2 {
     padding-top: 3rem;
   }
@@ -242,21 +246,29 @@
     height: 2rem;
   }
 
-  imgContainer {
-    max-width: 30rem;
-    max-height: 30rem;
-    margin: 0 auto;
+  img.photo {
+    margin: 1rem -4rem;
+    aspect-ratio: 4/3;
+    height: auto;
+    width: calc(100% + 8rem);
+    object-fit: cover;
   }
 
-  img.photo {
-    margin: 0 -4rem;
-    padding: 3rem 0;
+  img.photo + img.photo {
+    margin-top: 0;
+  }
+
+  badgeContainer {
+    width: 30rem;
+    height: 30rem;
+    margin: 0 auto;
   }
 
   img.badge {
     width: 100%;
     height: 100%;
     border-radius: 100%;
+    background-color: #bab8c9;
     box-shadow: 0 0 0 0.5rem var(--color-pink), 0 0 0 1rem var(--color-red);
   }
 </style>

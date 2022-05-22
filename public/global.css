@@ -1,9 +1,4 @@
 @font-face {
-  font-family: "Lobster";
-  src: url("./assets/fonts/Lobster-Regular.ttf");
-}
-
-@font-face {
   font-family: "KoHo Bold";
   src: url("./assets/fonts/KoHo-Bold.ttf");
 }
@@ -20,7 +15,6 @@
   --color-red: #fa5555;
   --color-pink: #FF8989;
   --color-pink-secondary: #FFE4E1;
-  --font-title: "Lobster";
   --font-body: "KoHo";
   --font-body-bold: "KoHo Bold";
   --animation-recording: flickerAnimation 1s infinite;
