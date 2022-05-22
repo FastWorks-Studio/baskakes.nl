@@ -79,7 +79,6 @@
 
   path.corner {
     stroke: var(--color-corner);
-    opacity: 0.3;
   }
 
   path.text {

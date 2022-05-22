@@ -19,7 +19,7 @@
 <main>
   <Logo subtitle="work in progress" />
   <dimLayer />
-  <video preload="none" src={videoUrl} autoplay muted />
+  <video preload="none" src={videoUrl} autoplay muted loop />
 </main>
 <svelte:window on:resize={onResize} />
 
@@ -40,7 +40,7 @@
     position: absolute;
     inset: 0;
     z-index: -9;
-    opacity: 0.7;
+    opacity: 0.8;
     background-color: var(--color-background);
   }
 
@@ -51,7 +51,6 @@
     height: 100vh;
     object-fit: cover;
     z-index: -10;
-    filter: blur(1em);
     /* animation: var(--animation-recording); */
   }
 </style>
