@@ -38,6 +38,7 @@
 
 <main style="width:{width}px">
   <Logo subtitle="brengt het in beeld" />
+  <video preload="none" src={videoUrl} autoplay muted loop />
   <content>
     <badgeContainer>
       <img
@@ -163,7 +164,6 @@
     >
     <Button click="https://www.linkedin.com/in/bas-kakes/">LinkedIn</Button>
   </content>
-  <video preload="none" src={videoUrl} autoplay muted loop />
 </main>
 <svelte:window on:resize={onResize} bind:innerWidth />
 
@@ -196,7 +196,7 @@
     object-fit: cover;
     opacity: 0.2;
     z-index: -10;
-    filter: blur(2rem);
+    filter: blur(0.5rem);
   }
 
   quote {
@@ -231,7 +231,7 @@
     position: absolute;
     content: "";
     left: -15rem;
-    opacity: 0.35;
+    opacity: 0.3;
     transform: rotate(15deg);
     top: -8rem;
     z-index: -1;
