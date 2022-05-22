@@ -40,7 +40,7 @@
     position: absolute;
     inset: 0;
     z-index: -9;
-    opacity: 0.8;
+    opacity: 0.7;
     background-color: var(--color-background);
   }
 
@@ -51,6 +51,7 @@
     height: 100vh;
     object-fit: cover;
     z-index: -10;
+    filter: blur(1em);
     /* animation: var(--animation-recording); */
   }
 </style>
