@@ -1,10 +1,59 @@
+.landing div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
 .landing h1 {
   font-size: 2.5rem;
   color: #333;
 }
 
-.landing p {
-  font-size: 1.2rem;
-  color: #555;
-  margin-bottom: 1rem;
+.landing>.quote>p {
+  font-family: var(--font-body-bold);
+}
+
+.measurement {
+  width: 100%;
+  height: 0;
+}
+
+.quote {
+  margin: 0 auto;
+  text-align: center;
+  max-width: 60rem;
+  padding-bottom: 10rem;
+  font-family: var(--font-body-bold);
+  font-size: 32px;
+}
+
+img.photo {
+  margin: 1rem -4rem;
+  aspect-ratio: 4/3;
+  height: auto;
+  width: calc(100% + 8rem);
+  object-fit: cover;
+}
+
+img.photo+img.photo {
+  margin-top: 0;
+}
+
+.badgeContainer {
+  width: 30rem;
+  height: 30rem;
+  margin: 0 auto;
+  margin-top: 5rem;
+}
+
+img.badge {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  background-color: #bab8c9;
+  box-shadow:
+    0 0 0 0.5rem var(--color-pink),
+    0 0 0 1rem var(--color-red);
 }

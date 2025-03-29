@@ -1,0 +1,37 @@
+:root {
+  --color-corner: var(--color-text);
+}
+
+.landingGraphic circle {
+  fill: var(--color-red);
+  animation: var(--animation-recording);
+}
+
+.landingGraphic path.corner {
+  stroke: var(--color-corner);
+  opacity: 0.3;
+}
+
+.landingGraphic path.text {
+  fill: var(--color-text);
+}
+
+.landingGraphic path.shadow {
+  fill: var(--color-pink);
+}
+
+.landingGraphic p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.landingGraphic p.subtitle {
+  color: var(--color-corner);
+  font-family: var(--font-body-bold);
+  opacity: 0.3;
+  font-weight: 100;
+  font-style: italic;
+  user-select: none;
+  -webkit-user-select: none;
+}

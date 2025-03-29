@@ -10,14 +10,13 @@ const Home = () => {
     fetchWebsite()
       .then((data) => {
         setWebsite(data);
-        console.log(JSON.stringify(data));
       });
   }, []);
 
   return (
-    <div>
+    <>
       {website ? <WebsiteStructureComponent website={website} /> : <p>Loading...</p>}
-    </div>
+    </>
   );
 };
 

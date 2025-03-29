@@ -8,7 +8,7 @@ interface Props {
 
 const WebsiteStructureComponent = ({ website }: Props) => {
   return (
-    <div>
+    <>
       {website.fields.contentBlocks.map((entry: Entry<ContentBlock | VideoBlock>) => {
         if ('content' in entry.fields) {
           const contentBlock = entry as Entry<ContentBlock>;
@@ -31,7 +31,7 @@ const WebsiteStructureComponent = ({ website }: Props) => {
           return null;
         }
       })}
-    </div>
+    </>
   );
 };
 
