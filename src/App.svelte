@@ -4,11 +4,12 @@
   import Button from "./components/Button.svelte";
   import Logo from "./components/Logo.svelte";
   import Vimeo from "./components/Vimeo.svelte";
+  import Home from "./components/Home.svelte";
 
   $: innerWidth = 0;
   $: width = Math.min(
     Math.max(screen.width, screen.height) * 0.5,
-    Math.max(innerWidth, 300)
+    Math.max(innerWidth, 300),
   );
 
   $: videoUrl = getVideoUrl();
@@ -37,7 +38,9 @@
 </script>
 
 <main style="width:{width}px">
-  <Logo subtitle="brengt het in beeld" />
+  <Home></Home>
+
+  <!-- <Logo subtitle="brengt het in beeld" />
   <video preload="none" src={videoUrl} autoplay muted loop playsinline />
   <content>
     <badgeContainer>
@@ -163,7 +166,7 @@
       >Mail mij</Button
     >
     <Button click="https://www.linkedin.com/in/bas-kakes/">LinkedIn</Button>
-  </content>
+  </content> -->
 </main>
 <svelte:window on:resize={onResize} bind:innerWidth />
 
@@ -270,6 +273,8 @@
     height: 100%;
     border-radius: 100%;
     background-color: #bab8c9;
-    box-shadow: 0 0 0 0.5rem var(--color-pink), 0 0 0 1rem var(--color-red);
+    box-shadow:
+      0 0 0 0.5rem var(--color-pink),
+      0 0 0 1rem var(--color-red);
   }
 </style>
