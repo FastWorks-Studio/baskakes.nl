@@ -2,7 +2,6 @@ import CmsContent from './pages/CmsContent/CmsContent';
 import Landing from './pages/Landing/Landing';
 import './App.css';
 import Footer from './pages/Footer/Footer';
-import PageBackground from './components/page-background/PageBackground';
 
 function App() {
 
