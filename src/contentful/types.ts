@@ -24,8 +24,8 @@ export interface VideoBlock {
   aspectRatio?: string;
 }
 
-export const WebsiteStructureTypeId = 'websiteStructure';
+export const WebsiteStructureTypeId = 'webpage';
 export interface WebsiteStructure {
   entryName: string;
-  contentBlocks: Entry<ContentBlock | VideoBlock>[];
+  content: Entry<ContentBlock | VideoBlock>[];
 }

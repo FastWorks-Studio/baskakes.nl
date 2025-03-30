@@ -5,13 +5,13 @@ import { Video } from '../rich-text-renderer/video/Video';
 import './WebsiteStructure.css';
 
 interface Props {
-  website: Entry<WebsiteStructure>;
+  webpage: Entry<WebsiteStructure>;
 }
 
-const WebsiteStructureComponent = ({ website }: Props) => {
+const Webpage = ({ webpage }: Props) => {
   return (
-    <div className="websiteStructure">
-      {website.fields.contentBlocks.map((entry: Entry<ContentBlock | VideoBlock>) => {
+    <div className="webpage">
+      {webpage.fields.content.map((entry: Entry<ContentBlock | VideoBlock>) => {
         switch (entry.sys.contentType?.sys.id) {
           case ContentBlockTypeId:
             const contentBlock = entry as Entry<ContentBlock>;
@@ -35,4 +35,4 @@ const WebsiteStructureComponent = ({ website }: Props) => {
   );
 };
 
-export default WebsiteStructureComponent;
+export default Webpage;

@@ -6,6 +6,6 @@ export async function fetchWebsite(): Promise<Entry<WebsiteStructure>> {
   const response = await client.getEntries<EntrySkeletonType<WebsiteStructure>>({
     content_type: WebsiteStructureTypeId,
   });
-
+  console.log(response.items[0]);
   return response.items[0];
 }

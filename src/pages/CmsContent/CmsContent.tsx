@@ -5,18 +5,18 @@ import WebsiteStructureComponent from '../../components/website-structure/Websit
 import './CmsContent.css';
 
 const CmsContent = () => {
-  const [website, setWebsite] = useState<Entry<WebsiteStructure>>();
+  const [webpage, setWebpage] = useState<Entry<WebsiteStructure>>();
 
   useEffect(() => {
     fetchWebsite()
       .then((data) => {
-        setWebsite(data);
+        setWebpage(data);
       });
   }, []);
 
   return (
     <div className="cms-content" id='cms-content'>
-      {website ? <WebsiteStructureComponent website={website} /> : <p>Loading...</p>}
+      {webpage ? <WebsiteStructureComponent webpage={webpage} /> : <p>Loading...</p>}
     </div>
   );
 };
