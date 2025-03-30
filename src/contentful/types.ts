@@ -1,3 +1,5 @@
+import { Asset } from "contentful";
+
 export interface Entry<T> {
   sys: {
     id: string;
@@ -24,8 +26,10 @@ export interface VideoBlock {
   aspectRatio?: string;
 }
 
-export const WebsiteStructureTypeId = 'webpage';
-export interface WebsiteStructure {
+export const WebpageTypeId = 'webpage';
+export interface Webpage {
   entryName: string;
   content: Entry<ContentBlock | VideoBlock>[];
+  portraitBackground?: Asset;
+  landscapeBackground?: Asset;
 }

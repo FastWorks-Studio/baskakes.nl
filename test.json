@@ -1,0 +1,40 @@
+{
+  "metadata": {
+    "tags": [],
+    "concepts": []
+  },
+  "sys": {
+    "space": {
+      "sys": {
+        "type": "Link",
+        "linkType": "Space",
+        "id": "8v0gdxl4ncp0"
+      }
+    },
+    "id": "3hNgzBgXO9W59ZTTmMaS3o",
+    "type": "Asset",
+    "createdAt": "2025-03-30T15:51:51.571Z",
+    "updatedAt": "2025-03-30T15:51:51.571Z",
+    "environment": {
+      "sys": {
+        "id": "master",
+        "type": "Link",
+        "linkType": "Environment"
+      }
+    },
+    "publishedVersion": 2,
+    "revision": 1,
+    "locale": "en-US"
+  },
+  "fields": {
+    "title": "bg landscape",
+    "file": {
+      "url": "//videos.ctfassets.net/8v0gdxl4ncp0/3hNgzBgXO9W59ZTTmMaS3o/704e4d751124adde0baeab99628d3607/bg_landscape.mp4",
+      "details": {
+        "size": 2007938
+      },
+      "fileName": "bg_landscape.mp4",
+      "contentType": "video/mp4"
+    }
+  }
+}

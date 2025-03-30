@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react';
 import { fetchWebsite } from '../../contentful/queries';
-import { Entry, WebsiteStructure } from '../../contentful/types';
-import WebsiteStructureComponent from '../../components/website-structure/WebsiteStructure';
+import { Entry, Webpage } from '../../contentful/types';
+import WebsiteStructureComponent from '../../components/webpage/WebpageComponent';
 import './CmsContent.css';
 
 const CmsContent = () => {
-  const [webpage, setWebpage] = useState<Entry<WebsiteStructure>>();
+  const [webpage, setWebpage] = useState<Entry<Webpage>>();
 
   useEffect(() => {
     fetchWebsite()
@@ -13,10 +13,11 @@ const CmsContent = () => {
         setWebpage(data);
       });
   }, []);
+  if (webpage === undefined) { return null; }
 
   return (
     <div className="cms-content" id='cms-content'>
-      {webpage ? <WebsiteStructureComponent webpage={webpage} /> : <p>Loading...</p>}
+      <WebsiteStructureComponent webpage={webpage} />
     </div>
   );
 };

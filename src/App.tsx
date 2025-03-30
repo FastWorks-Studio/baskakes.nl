@@ -2,7 +2,7 @@ import CmsContent from './pages/CmsContent/CmsContent';
 import Landing from './pages/Landing/Landing';
 import './App.css';
 import Footer from './pages/Footer/Footer';
-import BackgroundVideo from './components/background-video/BackgroundVideo';
+import PageBackground from './components/page-background/PageBackground';
 
 function App() {
 
@@ -14,7 +14,6 @@ function App() {
           <CmsContent />
           <Footer />
         </div>
-        <BackgroundVideo />
       </div>
     </main>
   );
