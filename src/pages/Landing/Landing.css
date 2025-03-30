@@ -19,7 +19,6 @@
   gap: 4rem;
   display: flex;
   flex-direction: column;
-  padding-bottom: 10rem;
 }
 
 .landing>.quote>p {
@@ -30,18 +29,22 @@
   text-align: center;
   max-width: 60rem;
   font-family: var(--font-body-bold);
-  font-size: 32px;
+  font-size: 3.5rem;
+
+  @media (max-height: 768px) {
+    font-size: 2.5rem;
+  }
 }
 
 .badgeContainer {
-  width: 40rem;
-  height: 40rem;
+  width: 60vw;
+  max-width: 60rem;
+  max-width: 60rem;
   margin: 0 auto;
 }
 
 img.badge {
   width: 100%;
-  height: 100%;
   border-radius: 100%;
   background-color: #bab8c9;
   box-shadow:
