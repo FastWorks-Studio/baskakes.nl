@@ -20,6 +20,10 @@
   --animation-recording: flickerAnimation 1s infinite;
   --block-spacing: 4rem;
   --page-padding: 4rem;
+
+  @media (max-width: 768px) {
+    --page-padding: 2rem;
+  }
 }
 
 * {
