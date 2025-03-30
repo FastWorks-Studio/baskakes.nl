@@ -20,6 +20,6 @@
   max-width: 100%;
 }
 
-.richText>strong.bold {
+strong.bold {
   font-family: var(--font-body-bold);
 }
