@@ -1,51 +1,42 @@
-.landing div {
+.landing {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: var(--page-padding);
+}
+
+.landing>.column {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   text-align: center;
+  height: 100%;
+  padding-bottom: 7rem;
 }
 
-.landing h1 {
-  font-size: 2.5rem;
-  color: #333;
+.bans {
+  gap: 4rem;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 10rem;
 }
 
 .landing>.quote>p {
   font-family: var(--font-body-bold);
 }
 
-.measurement {
-  width: 100%;
-  height: 0;
-}
-
 .quote {
-  margin: 0 auto;
   text-align: center;
   max-width: 60rem;
-  padding-bottom: 10rem;
   font-family: var(--font-body-bold);
   font-size: 32px;
 }
 
-img.photo {
-  margin: 1rem -4rem;
-  aspect-ratio: 4/3;
-  height: auto;
-  width: calc(100% + 8rem);
-  object-fit: cover;
-}
-
-img.photo+img.photo {
-  margin-top: 0;
-}
-
 .badgeContainer {
-  width: 30rem;
-  height: 30rem;
+  width: 40rem;
+  height: 40rem;
   margin: 0 auto;
-  margin-top: 5rem;
 }
 
 img.badge {

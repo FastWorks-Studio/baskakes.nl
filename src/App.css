@@ -18,17 +18,14 @@
   --font-body: "KoHo";
   --font-body-bold: "KoHo Bold";
   --animation-recording: flickerAnimation 1s infinite;
+  --block-spacing: 4rem;
+  --page-padding: 4rem;
 }
-
-/* @media (prefers-color-scheme: light) {
-  :root {
-    --color-text: #545454;
-    --color-background: #fff;
-  }
-} */
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html {
@@ -59,20 +56,21 @@ h5,
 h6 {
   font-family: var(--font-body-bold);
   font-weight: 500;
+  margin: 0;
+  padding: 0 0 1rem 0;
+  text-shadow: -1px 2px var(--color-pink);
 }
 
 h1 {
-  font-size: 100px;
+  font-size: 60px;
 }
 
 h2 {
   font-size: 40px;
-  text-shadow: -1px 2px var(--color-pink);
 }
 
 h3 {
   font-size: 30px;
-  text-shadow: -1px 2px var(--color-pink);
 }
 
 h4 {
@@ -88,7 +86,7 @@ h6 {
 }
 
 p {
-  font-size: 26px;
+  font-size: 24px;
   font-family: var(--font-body);
 }
 
@@ -98,7 +96,7 @@ p.bold {
 
 a {
   font-family: var(--font-body-bold);
-  color: var(--color-pink-secondary);
+  color: var(--color-pink);
   text-decoration-color: var(--color-pink);
   cursor: pointer;
   display: inline-block;
@@ -106,8 +104,33 @@ a {
 }
 
 a:hover {
-  color: var(--color-pink);
+  color: var(--color-pink-secondary);
   text-decoration-color: var(--color-pink);
+}
+
+main {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: stretch;
+  width: 100vw;
+  justify-content: center;
+}
+
+.app {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 100rem;
+}
+
+.app>.content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 4rem;
+  margin: auto;
 }
 
 @keyframes flickerAnimation {
@@ -122,120 +145,4 @@ a:hover {
   100% {
     opacity: 1;
   }
-}
-
-main {
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  align-items: stretch;
-  padding: 4rem;
-  width: 100vw;
-  justify-content: center;
-}
-
-.content {
-  padding-top: 2rem;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  gap: 2rem;
-  max-width: 100rem;
-  margin: auto;
-}
-
-.quote {
-  margin: 0 auto;
-  text-align: center;
-  max-width: 60rem;
-  padding-bottom: 10rem;
-}
-
-video {
-  position: fixed;
-  inset: 0;
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
-  opacity: 0.2;
-  z-index: -10;
-  filter: blur(0.5rem);
-}
-
-quote {
-  margin: 0 auto;
-  text-align: center;
-  max-width: 60rem;
-  padding-bottom: 10rem;
-}
-
-quote>p {
-  font-family: var(--font-body-bold);
-  font-size: 32px;
-}
-
-h2.reel {
-  padding-top: 12rem;
-}
-
-h2 {
-  padding-top: 3rem;
-}
-
-h3 {
-  padding-top: 2rem;
-}
-
-p.bmw {
-  position: relative;
-}
-
-p.bmw:after {
-  position: absolute;
-  content: "";
-  left: -15rem;
-  opacity: 0.3;
-  transform: rotate(15deg);
-  top: -8rem;
-  z-index: -1;
-  width: 40rem;
-  height: 40rem;
-  background-size: 40rem 40rem;
-  background-image: url("../assets/images/bmw-logo.svg");
-  background-repeat: none;
-}
-
-spacer {
-  height: 2rem;
-}
-
-img.photo {
-  margin: 1rem -4rem;
-  aspect-ratio: 4/3;
-  height: auto;
-  width: calc(100% + 8rem);
-  object-fit: cover;
-}
-
-img.photo+img.photo {
-  margin-top: 0;
-}
-
-badgeContainer {
-  width: 30rem;
-  height: 30rem;
-  margin: 0 auto;
-  margin-top: 5rem;
-}
-
-img.badge {
-  width: 100%;
-  height: 100%;
-  border-radius: 100%;
-  background-color: #bab8c9;
-  box-shadow:
-    0 0 0 0.5rem var(--color-pink),
-    0 0 0 1rem var(--color-red);
 }

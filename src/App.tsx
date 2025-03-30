@@ -1,24 +1,21 @@
-import Home from './pages/Home/Home';
+import CmsContent from './pages/CmsContent/CmsContent';
 import Landing from './pages/Landing/Landing';
 import './App.css';
 import Footer from './pages/Footer/Footer';
+import BackgroundVideo from './components/background-video/BackgroundVideo';
 
 function App() {
 
-  function getVideoUrl() {
-    const orientation =
-      window.innerHeight > window.innerWidth ? "portrait" : "landscape";
-    return `./assets/video/bg_${orientation}.mp4`;
-  }
-
   return (
     <main>
-      <div className="content">
+      <div className="app">
         <Landing />
-        <Home />
-        <Footer />
+        <div className="content">
+          <CmsContent />
+          <Footer />
+        </div>
+        <BackgroundVideo />
       </div>
-      <video preload="none" src={getVideoUrl()} autoPlay muted loop playsInline />
     </main>
   );
 }

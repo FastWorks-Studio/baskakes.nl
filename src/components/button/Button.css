@@ -1,7 +1,8 @@
 button,
 button:hover,
 button:active {
-  padding: 0rem 4rem 0.5rem 4rem;
+  padding: 1rem 3rem;
+  padding-bottom: 1.5rem;
   border-radius: 100vh;
   text-align: center;
   border: 0.4rem solid var(--color-red);
@@ -26,4 +27,8 @@ button:active>p {
 button>p {
   color: var(--color-red);
   font-family: var(--font-body-bold);
+}
+
+button:focus {
+  outline: 0;
 }

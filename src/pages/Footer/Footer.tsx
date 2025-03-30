@@ -4,23 +4,23 @@ import './Footer.css';
 const Footer = () => {
 
   const handleClickCollaborate = () => {
-    // TODO: mailto:info@baskakes.nl?subject=Samenwerken aan project
+    window.location.href = 'mailto:info@baskakes.nl?subject=Samenwerken aan project';
   };
   const handleClickLinkedIn = () => {
-    // TODO: https://www.linkedin.com/in/bas-kakes/
+    window.open('https://www.linkedin.com/in/bas-kakes/', '_blank');
   };
 
   return (
     <div className='footer'>
-      <p>
-        Natuurlijk ben ik beschikbaar voor onder ander bedrijfsvideo’s,
-        commercials, videoclips en allerlei andere videoklussen. Zullen we
-        samenwerken aan uw project?
-      </p>
-      <Button click={handleClickCollaborate}
-      >Mail mij</Button
-      >
-      <Button click={handleClickLinkedIn}>LinkedIn</Button>
+      <div className='carousel'>
+        <Button click={handleClickCollaborate}>
+          Mail mij
+        </Button>
+
+        <Button click={handleClickLinkedIn}>
+          LinkedIn
+        </Button>
+      </div>
     </div >
   );
 };

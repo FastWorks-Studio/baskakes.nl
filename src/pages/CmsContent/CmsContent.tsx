@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react';
 import { fetchWebsite } from '../../contentful/queries';
 import { Entry, WebsiteStructure } from '../../contentful/types';
-import WebsiteStructureComponent from '../../components/WebsiteStructure';
+import WebsiteStructureComponent from '../../components/website-structure/WebsiteStructure';
+import './CmsContent.css';
 
-const Home = () => {
+const CmsContent = () => {
   const [website, setWebsite] = useState<Entry<WebsiteStructure>>();
 
   useEffect(() => {
@@ -14,10 +15,10 @@ const Home = () => {
   }, []);
 
   return (
-    <>
+    <div className="cms-content" id='cms-content'>
       {website ? <WebsiteStructureComponent website={website} /> : <p>Loading...</p>}
-    </>
+    </div>
   );
 };
 
-export default Home;
+export default CmsContent;

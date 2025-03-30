@@ -1,0 +1,25 @@
+.richText {
+  display: flex;
+  flex-direction: column;
+  gap: var(--block-spacing);
+}
+
+.richText>p,
+.richText>h1,
+.richText>h2,
+.richText>h3,
+.richText>h4,
+.richText>h5,
+.richText>h6 {
+  padding: 0 var(--page-padding);
+}
+
+.richText>.contentfulImage {
+  margin: 0 auto;
+  display: block;
+  max-width: 100%;
+}
+
+.richText>strong.bold {
+  font-family: var(--font-body-bold);
+}

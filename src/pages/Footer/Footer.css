@@ -1,0 +1,14 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0 var(--page-padding);
+  padding-bottom: var(--page-padding);
+}
+
+.footer>.carousel {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 2rem;
+}
