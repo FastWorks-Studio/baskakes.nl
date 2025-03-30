@@ -1,11 +1,11 @@
 @font-face {
   font-family: "KoHo Bold";
-  src: url("./assets/fonts/KoHo-Bold.ttf");
+  src: url("/assets/fonts/KoHo-Bold.ttf");
 }
 
 @font-face {
   font-family: "KoHo";
-  src: url("./assets/fonts/KoHo-Regular.ttf");
+  src: url('/assets/fonts/KoHo-Regular.ttf');
 }
 
 :root {
