@@ -55,7 +55,7 @@ const LandingGraphic: React.FC<LandingGraphicProps> = ({ subtitle }) => {
             className="subtitle"
             style={{
               fontSize: logoWidth / 29,
-              transform: `translate(${logoWidth / 80}px, -${logoWidth / 28}px)`,
+              transform: `translate(${logoWidth / 80}px, -${logoWidth / 26}px)`,
             }}
           >
             {subtitle.toUpperCase()}
