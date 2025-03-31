@@ -26,6 +26,13 @@
   }
 }
 
+@media (prefers-color-scheme: light) {
+  :root {
+    --color-background: #fff;
+    --color-text: #222;
+  }
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -110,6 +117,16 @@ a {
 a:hover {
   color: var(--color-pink-secondary);
   text-decoration-color: var(--color-pink);
+}
+
+@media (prefers-color-scheme: light) {
+  a {
+    color: var(--color-red);
+  }
+
+  a:hover {
+    color: var(--color-pink);
+  }
 }
 
 main {
